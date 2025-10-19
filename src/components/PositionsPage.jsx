@@ -87,7 +87,7 @@ const PositionsPage = () => {
     }
     
     try {
-      const response = await fetch(`http://127.0.0.1:5000/job_malpractice?name=${encodeURIComponent(positionName)}`, {
+      const response = await fetch(`http://api.snnuexam.clcy.xyz/job_malpractice?name=${encodeURIComponent(positionName)}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -148,7 +148,7 @@ const PositionsPage = () => {
   // 处理管理按钮点击
   const handleManageClick = async (positionName) => {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/job_malpractice?name=${encodeURIComponent(positionName)}`, {
+      const response = await fetch(`http://api.snnuexam.clcy.xyz/job_malpractice?name=${encodeURIComponent(positionName)}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -186,7 +186,7 @@ const PositionsPage = () => {
     }
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/add_job_malpractice', {
+      const response = await fetch('http://api.snnuexam.clcy.xyz/add_job_malpractice', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -224,7 +224,7 @@ const PositionsPage = () => {
     }
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/remove_job_malpractice', {
+      const response = await fetch('http://api.snnuexam.clcy.xyz/remove_job_malpractice', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -288,10 +288,10 @@ const PositionsPage = () => {
       let url, paramName;
       
       if (field === 'workload') {
-        url = 'http://127.0.0.1:5000/change_workload';
+        url = 'http://api.snnuexam.clcy.xyz/change_workload';
         paramName = 'workload';
       } else if (field === 'deduction_factor') {
-        url = 'http://127.0.0.1:5000/change_deduction_factor';
+        url = 'http://api.snnuexam.clcy.xyz/change_deduction_factor';
         paramName = 'deduction_factor';
       }
       
@@ -355,7 +355,7 @@ const PositionsPage = () => {
     }
     
     try {
-      const response = await fetch('http://127.0.0.1:5000/submit_malpractice_record', {
+      const response = await fetch('http://api.snnuexam.clcy.xyz/submit_malpractice_record', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
