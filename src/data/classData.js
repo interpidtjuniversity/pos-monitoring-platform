@@ -3,7 +3,7 @@
 // 获取岗位数据
 export const fetchPositionsData = async () => {
   try {
-    const response = await fetch('http://host.docker.internal:5000/students_jobs');
+    const response = await fetch('http://127.0.0.1:5000/students_jobs');
     const result = await response.json();
     
     if (result.result) {
@@ -30,7 +30,7 @@ export const fetchPositionsData = async () => {
 // 获取学生数据
 export const fetchStudentsData = async () => {
   try {
-    const response = await fetch('http://host.docker.internal:5000/students_pos_score');
+    const response = await fetch('http://127.0.0.1:5000/students_pos_score');
     const result = await response.json();
     
     if (result.result) {
