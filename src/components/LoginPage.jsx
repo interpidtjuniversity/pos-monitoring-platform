@@ -17,7 +17,7 @@ const LoginPage = () => {
     setError('');
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/pos-monitoring-platform-login', {
+      const response = await fetch('http://host.docker.internal:5000/pos-monitoring-platform-login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
